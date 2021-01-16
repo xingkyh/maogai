@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toos="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    toos:context=".MainActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs_rg"/>
+
+
+    <RadioGroup
+        android:id="@+id/tabs_rg"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#dcdcdc"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/button_plan"
+            style="@style/radiobutton_style"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_plan"
+            android:text="教学计划"
+            />
+
+        <RadioButton
+            android:id="@+id/button_courseware"
+            style="@style/radiobutton_style"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_courseware"
+            android:text="专题课件"/>
+
+        <RadioButton
+            android:id="@+id/button_video"
+            style="@style/radiobutton_style"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_video"
+            android:text="教学视频"
+            />
+
+        <RadioButton
+            android:id="@+id/button_test"
+            style="@style/radiobutton_style"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_test"
+            android:text="在线测试"
+            />
+
+        <RadioButton
+            android:id="@+id/button_read"
+            style="@style/radiobutton_style"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_read"
+            android:text="经典阅读"
+            />
+    </RadioGroup>
+
+</RelativeLayout>
