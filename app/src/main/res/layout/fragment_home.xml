@@ -32,14 +32,14 @@
         <RadioButton
             android:id="@+id/button_courseware"
             style="@style/radiobutton_style"
-            android:checked="true"
+            android:checked="false"
             android:drawableTop="@drawable/ic_courseware"
             android:text="专题课件"/>
 
         <RadioButton
             android:id="@+id/button_video"
             style="@style/radiobutton_style"
-            android:checked="true"
+            android:checked="false"
             android:drawableTop="@drawable/ic_video"
             android:text="教学视频"
             />
@@ -47,7 +47,7 @@
         <RadioButton
             android:id="@+id/button_test"
             style="@style/radiobutton_style"
-            android:checked="true"
+            android:checked="false"
             android:drawableTop="@drawable/ic_test"
             android:text="在线测试"
             />
@@ -55,7 +55,7 @@
         <RadioButton
             android:id="@+id/button_read"
             style="@style/radiobutton_style"
-            android:checked="true"
+            android:checked="false"
             android:drawableTop="@drawable/ic_read"
             android:text="经典阅读"
             />
