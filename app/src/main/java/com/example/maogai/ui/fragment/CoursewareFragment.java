@@ -133,7 +133,7 @@ public class CoursewareFragment extends Fragment implements View.OnClickListener
                 url = "null";
 
         }
-        Log.i("url",url);
+        //Log.i("url",url);
         fm=getFragmentManager();
         ft=fm.beginTransaction();
         Fragment fragment= new WebViewFragment();

@@ -56,4 +56,6 @@
     <string name="course15">全面从严治党</string>
     <string name="time15">2课时</string>
     <string name="plan">备注：计划16至17周进行期末复习与试题讲解，18周进行期末测试，19周开始进入寒假。</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

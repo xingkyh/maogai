@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".othersActivity.ExamActivity"/>
+        <activity android:name=".othersActivity.readActicity"/>
     </application>
 
 </manifest>
