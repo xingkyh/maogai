@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <ScrollView android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.90">
+        <LinearLayout android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="4"
+            android:scrollbars="vertical">
+            <TextView android:id="@+id/radom_practice_show_question"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:text="test">
+
+            </TextView>
+            <RadioGroup android:id="@+id/radom_practice_radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp">
+
+                <RadioButton android:id="@+id/radom_practice_radioA"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textSize="16dp"
+                    android:singleLine="true"
+                    android:layout_marginTop="10dp"
+                    android:text="A">
+                </RadioButton>
+
+                <RadioButton android:id="@+id/radom_practice_radioB"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textSize="16dp"
+                    android:singleLine="true"
+                    android:layout_marginTop="10dp"
+                    android:text="B">
+                </RadioButton>
+
+                <RadioButton android:id="@+id/radom_practice_radioC"
+                    android:singleLine="true"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="C">
+                </RadioButton>
+
+                <RadioButton android:id="@+id/radom_practice_radioD"
+                    android:singleLine="true"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="D">
+                </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

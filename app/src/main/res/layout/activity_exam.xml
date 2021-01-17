@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/activity_random_practice_headings"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#6633FF"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在线测试"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <Chronometer
+        android:id="@+id/activity_random_countdown"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        app:layout_constraintTop_toBottomOf="@id/activity_random_practice_headings"
+        android:layout_width="match_parent"
+        android:layout_below="@id/activity_random_practice_headings"
+        android:layout_height="30dp" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/activity_random_practice_viewPager"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_random_practice_headings"
+        android:layout_height="450dp"
+        >
+
+    </androidx.viewpager.widget.ViewPager>
+</LinearLayout>
