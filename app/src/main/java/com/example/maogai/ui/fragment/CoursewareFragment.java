@@ -18,9 +18,6 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.maogai.R;
 
 public class CoursewareFragment extends Fragment implements View.OnClickListener{
-    private FragmentManager fm;
-    private FragmentTransaction ft;
-    private WebView web1;
     private View root;
     private String url;
     private Button button1;
@@ -43,8 +40,6 @@ public class CoursewareFragment extends Fragment implements View.OnClickListener
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        fm=getFragmentManager();
-        ft=fm.beginTransaction();
         root = inflater.inflate(R.layout.fragment_courseware, container, false);
 
         button1 = (Button)root.findViewById(R.id.button1);
@@ -133,15 +128,20 @@ public class CoursewareFragment extends Fragment implements View.OnClickListener
                 url = "null";
 
         }
-        Log.i("url",url);
-        fm=getFragmentManager();
-        ft=fm.beginTransaction();
         Fragment fragment= new WebViewFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable("url",url);
         fragment.setArguments(bundle);
-        ft.replace(R.id.fragment_courseware, fragment);
-        ft.commit();
+        showFragment(fragment);
+    }
+
+    //用于页面跳转
+    private void showFragment(Fragment fragment){
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.nav_host_fragment, fragment)
+                .addToBackStack(null)
+                .commit();
+
     }
 }
 
