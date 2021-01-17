@@ -1,4 +1,4 @@
-package com.example.maogai.examination;
+package com.example.maogai.sqliteUtil;
 
 import android.os.Environment;
 
@@ -11,4 +11,6 @@ public class DbUtil {
             + Environment.getDataDirectory().getAbsolutePath() + "/"
             + PACKAGE_NAME + "/" + DB_NAME;
     public static final String EXAM_NAME = "subject";//题目表名
+    public static final String HISTORY_NAME = "history";//浏览历史表名
+    public static final String COLLECTION_NAME = "collection";//收藏表名
 }
