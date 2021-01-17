@@ -1,12 +1,301 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="教学计划(2020-2021学年)"
+        android:textSize="30sp" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2,3">
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date1" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course1" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date2" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course2" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time2" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date3" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course3" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time3" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date4" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course4"
+                tools:text="社会主义建设道路" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time4" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date5" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course5" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time5" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date6" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course6" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time6" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date7" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course7" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time7" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date8" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course8"
+                tools:text="习中特" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time8"
+                tools:text="2课时" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date9" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course9" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time9" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date10" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course10" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time10" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date11" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course11" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time11" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date12" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course12" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time12" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date13" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course13" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time13" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date14" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course14" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time14" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/date15" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/course15" />
+
+            <TextView
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="@string/time15" />
+        </TableRow>
+
+    </TableLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="这是教学计划"
-        android:textSize="30sp"
-    />
+        android:text="@string/plan"></TextView>
+
+
 </LinearLayout>
