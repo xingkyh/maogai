@@ -6,5 +6,47 @@
     android:orientation="vertical">
 
 
+    <TextView
+        android:id="@+id/exam_achievement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="成绩："
+        android:textSize="45sp"
+        android:gravity="center"
+        android:textColor="#CC0000"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="总题数：10"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/exam_already_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="已答题数："
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/exam_correct_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="正确题数："
+        android:textSize="25sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/exam_return"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:background="#CCCCCC"/>
+    </LinearLayout>
 
 </LinearLayout>
