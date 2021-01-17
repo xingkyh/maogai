@@ -3,9 +3,9 @@ package com.example.maogai.examination;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Debug;
 
 import com.example.maogai.R;
+import com.example.maogai.sqliteUtil.DbUtil;
 
 import java.io.File;
 import java.io.FileNotFoundException;
