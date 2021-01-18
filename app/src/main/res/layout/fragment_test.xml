@@ -8,14 +8,33 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="这是在线测试"
+
+        android:text="毛泽东思想和中国特色社会主"
+
+        android:layout_gravity="center"
         android:textSize="30sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="义理论体系概论"
+
+        android:layout_gravity="center"
+        android:textSize="30sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="在线测试"
+        android:layout_gravity="center"
+        android:textSize="50sp"/>
 
     <Button
         android:id="@+id/button_begin_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="开始测试"
-        android:textSize="25sp"/>
+        android:textSize="60sp"/>
 
 </LinearLayout>
