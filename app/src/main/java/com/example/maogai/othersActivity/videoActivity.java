@@ -27,7 +27,8 @@ public class videoActivity extends AppCompatActivity implements View.OnClickList
             mediaItem = MediaItem.fromUri("https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/3ad36d2b-23aa-48fd-b874-4ea4a6c2348c.mp4");
         if(var.equals("3"))
             mediaItem = MediaItem.fromUri("https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/8dddd85e-25f0-4ef1-9395-ad207f030b68.mp4");
-
+        if(var.equals("4"))
+            mediaItem = MediaItem.fromUri("https://vkceyugu.cdn.bspapp.com/VKCEYUGU-imgbed/20204c35-6d00-4300-aed6-14c35ddf83a4.mp4");
         player.setMediaItem(mediaItem);
         player.prepare();
         player.play();

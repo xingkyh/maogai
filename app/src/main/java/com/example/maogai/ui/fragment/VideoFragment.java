@@ -52,6 +52,16 @@ public class VideoFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        Button button4 = (Button) root.findViewById(R.id.video4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), videoActivity.class);
+                intent.putExtra("name","4");
+                startActivity(intent);
+            }
+        });
+
         return root;
     }
 

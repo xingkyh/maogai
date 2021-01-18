@@ -27,7 +27,7 @@
 
         android:text="在线测试"
         android:layout_gravity="center"
-        android:textSize="50sp"/>
+        android:textSize="30sp"/>
 
     <Button
         android:id="@+id/button_begin_test"
@@ -35,6 +35,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="开始测试"
-        android:textSize="60sp"/>
+        android:textSize="40sp"/>
 
 </LinearLayout>
