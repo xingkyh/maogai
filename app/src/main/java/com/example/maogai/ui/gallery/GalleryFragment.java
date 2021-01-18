@@ -36,7 +36,7 @@ public class GalleryFragment extends Fragment {
         SqlUtil sqlUtil = new SqlUtil(getActivity());
         sqlPages = sqlUtil.getALLHistory();
         LinearLayout linearLayout = (LinearLayout) root.findViewById(R.id.fragment_layout_history);
-        for (int i = 0; i < sqlPages.size(); i++){
+        for (int i = sqlPages.size() - 1; i >= 0; i--){
             TextView textView = new TextView(getActivity());
             SqlPage sp = sqlPages.get(i);
             textView.setText(sp.getChapter() + "：" + sp.getName());
