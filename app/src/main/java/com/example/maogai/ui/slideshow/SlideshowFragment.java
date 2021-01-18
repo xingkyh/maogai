@@ -61,6 +61,7 @@ public class SlideshowFragment extends Fragment {
         bundle.putSerializable("chapter", sqlPage.getChapter());
         bundle.putSerializable("name", sqlPage.getName());
         bundle.putSerializable("url", sqlPage.getUrl());
+        bundle.putSerializable("isReturn", "true");
         fragment.setArguments(bundle);
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.nav_host_fragment, fragment)

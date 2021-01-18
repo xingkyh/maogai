@@ -145,6 +145,7 @@ public class ExamActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
+        int correctAnswer = arrayList.get(viewpager.getCurrentItem()).getAnswer();
         switch (checkedId) {
             //ABCD四个选项，判断你选择的答案对不对
             case R.id.radom_practice_radioA:
@@ -152,7 +153,7 @@ public class ExamActivity extends AppCompatActivity implements ViewPager.OnPageC
                 onClick();
                 //判断答案是否正确
                 answer = 1;
-                if (arrayList.get(viewpager.getCurrentItem()).getAnswer() == answer) {
+                if (correctAnswer == answer) {
                     //如果对了换图片
                     radom_practice_radioA.setButtonDrawable(R.mipmap.exercise_option_t);
                     //对了换文字颜色 （系统自带的颜色）
@@ -163,13 +164,15 @@ public class ExamActivity extends AppCompatActivity implements ViewPager.OnPageC
                 else {
                     radom_practice_radioA.setButtonDrawable(R.mipmap.exercise_option_f);
                     radom_practice_radioA.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+                    //显示正确答案
+                    showAnswer(correctAnswer);
                 }
                 break;
 
             case R.id.radom_practice_radioB:
                 onClick();
                 answer = 2;
-                if (arrayList.get(viewpager.getCurrentItem()).getAnswer() == answer) {
+                if (correctAnswer == answer) {
                     radom_practice_radioB.setButtonDrawable(R.mipmap.exercise_option_t);
                     radom_practice_radioB.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
                     correctNum++;
@@ -177,13 +180,14 @@ public class ExamActivity extends AppCompatActivity implements ViewPager.OnPageC
                 else {
                     radom_practice_radioB.setButtonDrawable(R.mipmap.exercise_option_f);
                     radom_practice_radioB.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+                    showAnswer(correctAnswer);
                 }
                 break;
 
             case R.id.radom_practice_radioC:
                 onClick();
                 answer = 3;
-                if (arrayList.get(viewpager.getCurrentItem()).getAnswer() == answer) {
+                if (correctAnswer == answer) {
                     radom_practice_radioC.setButtonDrawable(R.mipmap.exercise_option_t);
                     radom_practice_radioC.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
                     correctNum++;
@@ -191,13 +195,14 @@ public class ExamActivity extends AppCompatActivity implements ViewPager.OnPageC
                 else {
                     radom_practice_radioC.setButtonDrawable(R.mipmap.exercise_option_f);
                     radom_practice_radioC.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+                    showAnswer(correctAnswer);
                 }
                 break;
 
             case R.id.radom_practice_radioD:
                 onClick();
                 answer = 4;
-                if (arrayList.get(viewpager.getCurrentItem()).getAnswer() == answer) {
+                if (correctAnswer == answer) {
                     radom_practice_radioD.setButtonDrawable(R.mipmap.exercise_option_t);
                     radom_practice_radioD.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
                     correctNum++;
@@ -205,6 +210,7 @@ public class ExamActivity extends AppCompatActivity implements ViewPager.OnPageC
                 else {
                     radom_practice_radioD.setButtonDrawable(R.mipmap.exercise_option_f);
                     radom_practice_radioD.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+                    showAnswer(correctAnswer);
                 }
                 break;
         }
@@ -213,6 +219,27 @@ public class ExamActivity extends AppCompatActivity implements ViewPager.OnPageC
         //lowerPage();
         //跳转到下一页
         //viewpager.setCurrentItem(viewpager.getCurrentItem() + 1);
+    }
+
+    private void showAnswer(int answer){
+        switch (answer){
+            case 1:
+                radom_practice_radioA.setButtonDrawable(R.mipmap.exercise_option_t);
+                radom_practice_radioA.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+                break;
+            case 2:
+                radom_practice_radioB.setButtonDrawable(R.mipmap.exercise_option_t);
+                radom_practice_radioB.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+                break;
+            case 3:
+                radom_practice_radioC.setButtonDrawable(R.mipmap.exercise_option_t);
+                radom_practice_radioC.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+                break;
+            case 4:
+                radom_practice_radioD.setButtonDrawable(R.mipmap.exercise_option_t);
+                radom_practice_radioD.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+                break;
+        }
     }
 
     private void lowerPage(){
@@ -259,21 +286,6 @@ public class ExamActivity extends AppCompatActivity implements ViewPager.OnPageC
         chronometer.stop();
         //跳转到最后一页
         viewpager.setCurrentItem(viewPageList.size() - 1);
-    }
-
-    @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-    }
-
-    @Override
-    public void onPageSelected(int position) {
-
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int state) {
-
     }
 
     @Override
@@ -355,5 +367,20 @@ public class ExamActivity extends AppCompatActivity implements ViewPager.OnPageC
             finish();
         }
         return false;
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
     }
 }

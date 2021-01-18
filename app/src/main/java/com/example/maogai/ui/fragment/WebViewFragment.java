@@ -25,9 +25,8 @@ public class WebViewFragment extends Fragment{
     private String chapter;
     private String name;
     private String url;
-    private TextView chapterTextView;
     private ImageView imageView;
-    private boolean isCollection;
+    private boolean isCollection, isReturn;//是否收藏，是否执行返回事件
     private SqlUtil sqlUtil;
 
 
@@ -48,6 +47,11 @@ public class WebViewFragment extends Fragment{
         chapter = (String) bundle.get("chapter");
         name = (String) bundle.get("name");
         url = (String) bundle.get("url");
+        String str = (String) bundle.get("isReturn");
+        isReturn = false;
+        if (str != null){
+            isReturn = Boolean.parseBoolean(str);
+        }
         init();
         return root;
     }
@@ -65,7 +69,7 @@ public class WebViewFragment extends Fragment{
                 return true;
             }
         });
-        chapterTextView =(TextView) root.findViewById(R.id.fragment_chapter);
+        TextView chapterTextView = (TextView) root.findViewById(R.id.fragment_chapter);
         chapterTextView.setText(chapter);
         isCollection = sqlUtil.isCollection(chapter);
         imageView = (ImageView) root.findViewById(R.id.fragment_collection);
@@ -94,5 +98,9 @@ public class WebViewFragment extends Fragment{
             sqlUtil.addCollection(new SqlPage(chapter, name, url));
             Toast.makeText(getActivity(), "收藏成功", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public boolean onBackPressed() {
+        return isReturn;
     }
 }

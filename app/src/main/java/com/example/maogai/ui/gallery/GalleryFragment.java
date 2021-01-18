@@ -1,6 +1,7 @@
 package com.example.maogai.ui.gallery;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,11 +60,11 @@ public class GalleryFragment extends Fragment {
         bundle.putSerializable("chapter", sqlPage.getChapter());
         bundle.putSerializable("name", sqlPage.getName());
         bundle.putSerializable("url", sqlPage.getUrl());
+        bundle.putSerializable("isReturn", "true");
         fragment.setArguments(bundle);
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.nav_host_fragment, fragment)
                 .addToBackStack(null)
                 .commit();
     }
-
 }
